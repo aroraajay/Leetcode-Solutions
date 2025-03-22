@@ -1,0 +1,13 @@
+#Python 3 
+class Solution:
+    def findClosestNumber(self, nums: List[int]) -> int:
+        lowestDist = 100001
+        for aNum in nums:
+            dist = abs(aNum - 0)
+            if dist < lowestDist:                
+                lowestDist = dist
+                key = aNum
+        if key < 0 and abs(key) in nums:
+            return abs(key)
+        else:
+            return key
